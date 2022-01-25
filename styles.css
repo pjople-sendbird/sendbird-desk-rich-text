@@ -1,0 +1,70 @@
+.wk-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.wk-container [contenteditable="true"],
+.wk-container #woofmark-textarea {
+  box-shadow: rgb(33 34 66 / 24%) 0px 1px 5px 0px, rgb(33 34 66 / 32%) 0px 0px 1px 0px, rgb(33 34 66 / 16%) 0px 2px 1px 0px;
+  min-height: 50px;
+  padding: 2px
+}
+
+div[class^="ChatBubble__MessageText"] ol,
+div[class^="ChatBubble__MessageText"] ul,
+div[class^="ChatBubble__MessageText"] blockquote,
+.wk-container ol,
+.wk-container ul,
+.wk-container blockquote {
+  padding-left: 20px;
+}
+
+.wk-commands {
+  align-self: flex-start;
+}
+.wk-switchboard {
+  align-self: flex-end;
+}
+.wk-commands > button,
+.wk-switchboard > button {
+  display: inline-flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: var(--neutral-10);
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  min-width: 32px;
+  height: 32px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  user-select: none;
+  outline: 0px;
+}
+
+.wk-switchboard > button {
+  margin-left: 8px;
+  padding: 0 6px;
+}
+
+.wk-commands > button:hover,
+.wk-switchboard > button:hover {
+  color: var(--neutral-10);
+  background-color: var(--neutral-2);
+  border: 1px solid transparent;
+}
+
+.wk-switchboard > button.wk-mode-active {
+  color: var(--purple-7);
+  background-color: var(--purple-2);
+  opacity: 0.8;
+}
+
+div[class^="ticketItem__TicketMessage"] {
+  max-height: 40px;
+  overflow: hidden;
+}

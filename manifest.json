@@ -1,0 +1,39 @@
+{
+  "name": "Desk Rich Text",
+  "description": "Formats rich text messages in Desk and adds a text editor",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://dashboard.sendbird.com/*/desk/conversation*"
+      ],
+      "js": [
+        "content-script.js"
+      ],
+      "css": [
+        "woofmark.min.css",
+        "styles.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "editor.js",
+        "woofmark.min.js",
+        "megamark.min.js",
+        "domador.min.js"
+      ],
+      "matches": [
+        "https://dashboard.sendbird.com/*"
+      ]
+    }
+  ]
+}
